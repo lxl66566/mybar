@@ -977,10 +977,8 @@ ShellRoot {
                                         implicitHeight: 20
                                         anchors.centerIn: parent
                                         source: modelData.icon || Quickshell.iconPath("image-missing")
-                                        layer.enabled: true
-                                        layer.effect: ColorOverlay {
-                                            color: "#bac2de"
-                                        }
+                                        // Keep native colors: apps may publish full-color
+                                        // pixmaps (e.g. Tauri/libayatana tray PNGs).
                                     }
 
                                     function showMenu(mouse) {
